@@ -1,0 +1,22 @@
+# Configure file for using blade without google-libs
+
+cc_config(
+    extra_incs = [
+    'thirdparty/jsoncpp-0.5.0/include',
+    'thirdparty/zookeeper/',
+    'thirdparty/libevent',
+    'thirdparty',
+    ],
+    cppflags = ['-DHAVE_CONFIG_H', '-DCRC64_KEYID=1', '-DARITHMETIC_RIGHT_SHIFT',
+                '-DSIGNED_RIGHT_SHIFT_IS', '-DHAVE_NETINET_IN_H', '-DHAVE_NETDB_H', '-DBOOST_FILESYSTEM_DEPRECATED',
+                '-D_FILE_OFFSET_BITS=64', '-D_LARGE_FILE', '-D_AD_SERVER_V2_',  '-DCURL_STATICLIB', '-std=c++0x'],
+)
+
+cc_test_config(
+    dynamic_link=False,
+    heap_check='strict',
+    gperftools_libs=['thirdparty/perftools:tcmalloc'],
+    gperftools_debug_libs=['thirdparty/perftools:tcmalloc_debug'],
+    gtest_libs=['thirdparty/gtest:gtest'],
+    gtest_main_libs=['thirdparty/gtest:gtest_main']
+)

@@ -1,0 +1,7 @@
+build64_release/
+build64_debug/
+src/build64_release/
+src/build64_debug/
+.Building.lock
+.sconsign.dblite
+blade-bin

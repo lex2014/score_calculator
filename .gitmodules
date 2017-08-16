@@ -1,0 +1,6 @@
+[submodule "thirdparty"]
+	path = thirdparty
+	url = https://github.com/lex2014/thirdparty.git
+[submodule "toft"]
+	path = toft
+	url = https://github.com/lex2014/toft.git
